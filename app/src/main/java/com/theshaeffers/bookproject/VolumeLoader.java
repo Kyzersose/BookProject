@@ -11,9 +11,6 @@ import java.util.List;
 
 public class VolumeLoader extends AsyncTaskLoader<List<Volume>> {
 
-    //Tag for log messages
-    private static final String LOG_TAG = VolumeLoader.class.getName();
-
     //Query URL string
     private String mUrl;
 
