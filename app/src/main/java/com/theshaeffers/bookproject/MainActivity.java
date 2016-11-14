@@ -3,7 +3,6 @@ package com.theshaeffers.bookproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,15 +27,17 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                //Creates a string from the EditText input
                 String bookQuery = userInput.getText().toString();
+                //adds the Google Books API link to the user input and limits the results to 15.
                 searchRequestUrl = getText(R.string.api_query).toString()
                         + bookQuery + getText(R.string.max_results).toString();
+                //Intent used to pass the http query to the BooksListActivity
                 Intent intent = new Intent(MainActivity.this, BookListActivity.class);
                 intent.putExtra("infoPassed", searchRequestUrl);
                 startActivity(intent);
             }
         });
-        Log.e("MainActivity", "searchRequestUrk: " + searchRequestUrl);
     }
 
 

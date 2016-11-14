@@ -25,17 +25,10 @@ public class BookListActivity extends AppCompatActivity implements LoaderManager
     //TextView that is displayed when the list is empty
     private TextView mEmptyStateTextView;
 
-//    Intent intent = getIntent();
-//    private String searchRequestUrl = intent.getStringExtra("infoPassed");
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_list);
-
-
 
         //Find a reference to the {@link ListView} in the layout
         ListView volumeListView = (ListView) findViewById(R.id.book_list_view);
