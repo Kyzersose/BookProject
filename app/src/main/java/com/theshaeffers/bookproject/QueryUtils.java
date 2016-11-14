@@ -157,14 +157,23 @@ public final class QueryUtils {
                 String url = volumeInfo.getString("infoLink");
 
                 String volumeAuthors = "";
-                JSONArray authorsArray = volumeInfo.getJSONArray("authors");
-                for (int a = 0; a < authorsArray.length(); a++){
-                    volumeAuthors = volumeAuthors + authorsArray.getString(a) + ", ";
+                // Checks if the volume contains authors
+                if (volumeInfo.has("authors")) {
+                    JSONArray authorsArray = volumeInfo.getJSONArray("authors");
+                    for (int a = 0; a < authorsArray.length(); a++) {
+                        volumeAuthors = volumeAuthors + authorsArray.getString(a) + ", ";
+                    }
+                } else volumeAuthors = ", ";
+
+                String volumeDescription = "";
+                //Checks if the volume contains a description
+                if (volumeInfo.has("description")) {
+                    volumeDescription = volumeInfo.getString("description");
                 }
 
                 // Create a new {@link Volume} object with the image, title, author, description,
                 // and url from the JSON response.
-                Volume volume = new Volume(volumeTitle, volumeAuthors, url);
+                Volume volume = new Volume(volumeTitle, volumeAuthors, url, volumeDescription);
 
                 // Add the new {@link Volume} to the list of volumes.
                 volumes.add(volume);

@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Creates a string from the EditText input
                 String bookQuery = userInput.getText().toString();
+                //replace the blank spaces with %20 for proper url
+                bookQuery.replaceAll(" ", "%20");
                 //adds the Google Books API link to the user input and limits the results to 15.
                 searchRequestUrl = getText(R.string.api_query).toString()
                         + bookQuery + getText(R.string.max_results).toString();

@@ -50,9 +50,12 @@ public class VolumeAdapter extends ArrayAdapter<Volume> {
         //Set the text of the {@link authorsTextView}
         authorView.setText(authorsComplete);
 
+        //Find the TextView for description
+        TextView descriptionView = (TextView) listItemView.findViewById(R.id.descriptionTextView);
+        //set the text of the descriptionTextView
+        descriptionView.setText(currentVolume.getmDescription());
 
         //Return the list of Volumes
         return listItemView;
-
     }
 }

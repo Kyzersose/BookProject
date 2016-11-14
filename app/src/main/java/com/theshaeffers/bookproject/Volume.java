@@ -10,12 +10,14 @@ public class Volume {
     private String mTitle;
     private String mAuthors;
     private String mUrl;
+    private String mDescription;
 
-    public Volume(String title, String authors, String url) {
+    public Volume(String title, String authors, String url, String description) {
 
         mTitle = title;
         mAuthors = authors;
         mUrl = url;
+        mDescription = description;
     }
 
     public String getmTitle() {
@@ -28,5 +30,9 @@ public class Volume {
 
     public String getmUrl() {
         return mUrl;
+    }
+
+    public String getmDescription() {
+        return mDescription;
     }
 }

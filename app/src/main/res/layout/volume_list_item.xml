@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_height"
-        android:padding="8dp"
+        android:background="@color/backgroundColor"
         android:orientation="vertical"
-        android:background="@color/backgroundColor">
+        android:padding="8dp">
 
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            tools:text="Book Title"/>
+            tools:text="Book Title" />
+
         <TextView
             android:id="@+id/authorsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            tools:text="Authors"/>
+            tools:text="Authors" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            tools:text="Description" />
 
     </LinearLayout>
 
