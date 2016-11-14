@@ -4,4 +4,5 @@
     <string name="no_books">No books were found. Try broadening the search</string>
     <string name="api_query">https://www.googleapis.com/books/v1/volumes?q=</string>
     <string name="max_results">&amp;maxResults=10</string>
+    <string name="search_button_string">Search</string>
 </resources>
